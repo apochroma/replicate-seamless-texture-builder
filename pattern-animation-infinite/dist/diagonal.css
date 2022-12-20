@@ -1,0 +1,37 @@
+HTML CSSResult Skip Results Iframe
+EDIT ON
+.bg-container /* used for presentation */ {
+  width:100vh;
+  height:100vh;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate3d(-50%,-50%,0);
+  overflow:hidden;
+  box-shadow: 0 20px 80px rgba(0,0,255,.7);
+  background-color: #000000;
+}
+
+.bg-scroll {
+  opacity: .2;
+  position: absolute;
+  /* make BG larger than container */
+  height: 350%;
+  width: 350%;
+  /* center bg in container - ratio of 150% */
+  top: -25%;
+  left: -25%;
+  animation: backgroundScroll 50s linear infinite;
+  transform: rotate(45deg) scale(1);
+  transform-origin: center center;
+}
+
+@keyframes backgroundScroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    /* pattern bg texture is 1000x1000px */
+    background-position:0 -1000px;
+  }
+}
